@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class colorChangeCharminar : MonoBehaviour
+{
+    Renderer ren;
+    public int frame=0;
+    public Color mycolor;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        ren=gameObject.GetComponent<Renderer>();
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        frame++;
+        if(frame==1){
+            mycolor= new Color(1,0.75f,0.8f,1);
+            ren.material.color=mycolor;
+        }
+
+       else if(frame==1000){
+            mycolor= new Color(0.93f,0.92f,0.85f,1);
+            ren.material.color=mycolor;
+        }
+
+        else if(frame==3000){
+            mycolor= new Color(0.67f,0.84f,0.90f,0.5f);
+            ren.material.color=mycolor;
+        }
+      
+    }
+}
